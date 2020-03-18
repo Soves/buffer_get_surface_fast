@@ -4,13 +4,17 @@ if !surface_exists(surf){
 	surf = surface_create(room_width, room_height);
 	
 	surface_set_target(surf);
-		draw_rectangle_color( 0, 0, room_width, room_height, c_red, c_blue, c_red, c_red, false);
+		for (var xx = 0; xx < room_width; xx++){
+			for (var yy = 0; yy < room_height; yy++){
+					draw_point_color(xx,yy,choose(c_black,c_red,c_purple));
+			}
+		}
 	surface_reset_target();
 	
 }else{
 	//signle surface call
 	buffer_get_surface_fast( surf);
-	
+	//draw_surface( global.BGSF_surf, 0,0);
 	//--------------------- 
 	//batches of buffers for better performance on multiple calls
 	/*
