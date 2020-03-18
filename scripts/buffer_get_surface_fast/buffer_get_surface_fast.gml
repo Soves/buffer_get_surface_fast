@@ -21,6 +21,8 @@ if !surface_exists(global.BGSF_surf) || (_new_w != global.BGSF_surf_w || _new_h 
 surface_set_target(global.BGSF_surf);
 	shader_set(BGSF_shader);
 		
+		draw_clear_alpha(0,0);
+		
 		var _tex = surface_get_texture(_surf)
 		shader_set_uniform_f( global.BGSF_uniform_texel, texture_get_texel_width(_tex));
 		

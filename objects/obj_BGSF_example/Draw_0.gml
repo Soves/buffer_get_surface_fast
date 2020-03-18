@@ -9,7 +9,7 @@ if !surface_exists(surf){
 	
 }else{
 	//signle surface call
-	//buffer_get_surface_fast( surf);
+	buffer_get_surface_fast( surf);
 	
 	//--------------------- 
 	//batches of buffers for better performance on multiple calls
